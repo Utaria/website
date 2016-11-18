@@ -33,7 +33,18 @@ require_once 'core/config.php';
 <body>
 
 	<header>
+		<div class="left">
+			<a href="<?= BASE ?>" title="Utaria, les serveurs de demain !"><div id="logo"></div></a>
+		</div>
+		<div class="right">
+			<nav class="primary-menu">
+				<a href="#" title="Jouer maintenant"><div class="item special">JOUER</div></a>
+				<a href="#" title="La boutique d'Utaria"><div class="item special-2">Boutique</div></a>
+				<a href="#" title="L'équipe Utaria"><div class="item">L'EQUIPE</div></a>
+			</nav>
+		</div>
 
+		<div class="clear"></div>
 	</header>
 
 
@@ -43,7 +54,16 @@ require_once 'core/config.php';
 
 
 	<footer>
-		
+		<div class="left">
+			
+		</div>
+		<div class="middle">
+			
+		</div>
+		<div class="right">
+			<a href="#" title="Conditions générales">Conditions générales</a>
+			<a href="#" title="Mentions légales">Mentions légales</a>
+		</div>
 	</footer>
 
 
