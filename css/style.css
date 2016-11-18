@@ -68,7 +68,8 @@ header .ip {
 	line-height: 40px;
 	background: rgba(0,0,0,0.2);
 	
-	font-family: "Lato", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: bold;
 	font-size: 1.6em;
 	color: #FFF;
 }
@@ -89,6 +90,12 @@ header nav.primary-menu .item{
 	text-transform: uppercase;
 	line-height: 40px;
 	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+	
 	padding: 0 25px;
 	-webkit-border-radius: 25px;
 	        border-radius: 25px;
@@ -103,6 +110,9 @@ header nav.primary-menu .item.special-2 {
 	background: #f1c40f;
 }
 
+header nav.primary-menu .item.special:hover {background:#2577aa}
+header nav.primary-menu .item.special-2:hover {background:#f39c12}
+
 
 /*
  *	Conteneur principal du site	
@@ -111,7 +121,7 @@ section#main {
 	display: block;position: relative;
 	width: 100%;height: auto;
 	
-	margin-top: 100px;
+	margin-top: 7%;
 }
 
 section#main .hero-1,
@@ -132,6 +142,23 @@ section#main .hero-4 {
 section#main .hero-2{font-size:2em;color:#ddd}
 section#main .hero-3{font-size:1.8em;color:#fff}
 section#main .hero-4{font-size:4em;margin:10px 0;color:#f1c40f}
+
+section#main p {
+	display: block;position: relative;
+	width: 50%;height: auto;
+	text-align: center;
+	
+	background: rgba(255,255,255,0.7);
+	margin: 20px 25%;
+	padding: 20px 20px;
+	
+	border-top   : 3px solid rgba(0,0,0,0.2);
+	
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #212121;
+}
 
 section#main hr {
 	display: block;position: relative;

@@ -28,6 +28,7 @@ require_once 'core/config.php';
 
 	<!-- <link rel="icon" type="image/png" href="/imgs/logo/64x64.png" /> -->
 
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
@@ -37,10 +38,10 @@ require_once 'core/config.php';
 			<a href="<?= BASE ?>" title="Utaria, les serveurs de demain !"><div id="logo"></div></a>
 		</div>
 		<div class="right">
-			<nav class="primary-menu">
+			<!-- <nav class="primary-menu">
 				<a href="#" title="Jouer maintenant"><div class="item special">Jouer</div></a>
 				<a href="https://boutique.utaria.fr/" target="_blank" title="La boutique d'Utaria"><div class="item special-2">Boutique</div></a>
-			</nav>
+			</nav> -->
 			<div class="ip">mc.utaria.fr</div>
 		</div>
 
@@ -49,12 +50,10 @@ require_once 'core/config.php';
 
 
 	<section id="main">
-		<div class="hero-1">Préparez-vous</div>
+		<div class="hero-1">Préparez - vous</div>
 		<div class="hero-2">à jouer sur un serveur innovant</div>
 
-		<hr>
-
-		<p></p>
+		<p>Un nouveau monde survie unique et équilibré, un mode PVP dynamique et addictif, et bien plus.</p>
 		<div class="hero-3">Rendez-vous le <span style="position:relative;font-size:1.4em;top:3px;left:10px;color:#f1c40f">17.12.2016</span></div>
 	</section>
 
@@ -67,8 +66,8 @@ require_once 'core/config.php';
 			<span class="copyright">Utaria n'est pas affilié à Mojang.</span>
 		</div>
 		<div class="right">
-			<a href="#" title="Conditions générales">Conditions générales</a>
-			<a href="#" title="Mentions légales">Mentions légales</a>
+			<!-- <a href="#" title="Conditions générales">Conditions générales</a>
+			<a href="#" title="Mentions légales">Mentions légales</a> -->
 		</div>
 	</footer>
 
