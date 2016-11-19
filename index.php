@@ -26,10 +26,10 @@ require_once 'core/config.php';
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://utaria.fr/">
 
-	<!-- <link rel="icon" type="image/png" href="/imgs/logo/64x64.png" /> -->
+	<link rel="icon" type="image/png" href="./img/favicon.png" />
 
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.min.css">
 </head>
 <body>
 
@@ -50,20 +50,22 @@ require_once 'core/config.php';
 
 
 	<section id="main">
-		<div class="hero-1">Préparez - vous</div>
-		<div class="hero-2">à jouer sur un serveur innovant</div>
+		<h1 class="hero-1">Préparez - vous</h1>
+		<h1 class="hero-2">à jouer sur un serveur innovant</h1>
 
 		<p>Un nouveau monde survie unique et équilibré, un mode PVP dynamique et addictif, et bien plus.</p>
-		<div class="hero-3">Rendez-vous le <span style="position:relative;font-size:1.4em;top:3px;left:10px;color:#f1c40f">17.12.2016</span></div>
+		<h2 class="hero-3">Rendez-vous le <span class="open-date">16.12.2016</span></h2>
 	</section>
 
 
 	<footer>
 		<div class="left">
-			
+			<p>
+				Pour suivre les nouveautés :&nbsp;&nbsp; <a href="https://twitter.com/Utaria_FR" class="twitter-follow-button" data-lang="fr" data-show-count="false">Suivre @Utaria_FR</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</p>
 		</div>
 		<div class="center">
-			<span class="copyright">Utaria n'est pas affilié à Mojang.</span>
+			<span class="copyright">Utaria n'est pas affilié à Mojang.<br>Site internet par <b>Utarwyn</b>.</span>
 		</div>
 		<div class="right">
 			<!-- <a href="#" title="Conditions générales">Conditions générales</a>
@@ -73,6 +75,16 @@ require_once 'core/config.php';
 
 
 	<script type="text/javascript" src="./js/app.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-87706617-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 </body>
 </html>
