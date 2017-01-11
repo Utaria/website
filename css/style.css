@@ -6,11 +6,15 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+body, html {height:100%}
 body{
-	background: url(../img/background.png) no-repeat left top;
+	background: url(../img/background.png) no-repeat center center;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
+	
+	background-color: transparent;
+    background-attachment: fixed;
 	    
 	overflow: hidden;
 }
@@ -26,7 +30,6 @@ body:before{
 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(49,52,75,0.17) 6%,rgba(49,52,75,0.34) 12%,rgba(49,52,75,0.98) 89%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(49,52,75,0.17) 6%,rgba(49,52,75,0.34) 12%,rgba(49,52,75,0.98) 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#fa31344b',GradientType=0 ); /* IE6-9 */
-
 }
 a{ text-decoration:none }
 p{font-family: Helvetica, Arial, sans-serif;font-size: 1em;color:#383838}
@@ -40,9 +43,15 @@ p.error{ font-weight:bold;color:#c0392b }
  */
 header {
 	display: block;position: relative;
-	width: 80%;height: 80px;
+	width: 100%;height: auto;
+	margin-top: 40px;
+}
+
+header .row-container {
+	display: block;position: relative;
+	width: 1170px;height: auto;
 	
-	margin: 3% 10%;
+	margin: auto;
 }
 
 header .left, header .right {
@@ -53,14 +62,17 @@ header .left, header .right {
 
 header #logo {
 	display: block;position: relative;
-	width: auto;height: 100%;
+	width: auto;height: 80px;
 	
 	background: url(../img/logo.png) no-repeat left top;
+	-webkit-background-size: auto 80px;
+	     -o-background-size: auto 80px;
+	        background-size: auto 80px;
 }
 
 header .ip {
 	display: block;position: relative;
-	width: 180px;height: 40px;
+	width: 200px;height: 40px;
 	margin: 20px 30px;
 	float: right;
 	
@@ -89,6 +101,10 @@ header nav.primary-menu .item{
 	font-family: "Open Sans";
 	text-transform: uppercase;
 	line-height: 40px;
+	font-size: 15px;
+    font-weight: 700;
+    
+    background: none;
 	
 	-webkit-transition: ease-out .2s;
 	   -moz-transition: ease-out .2s;
@@ -97,13 +113,13 @@ header nav.primary-menu .item{
 	        transition: ease-out .2s;
 	
 	padding: 0 25px;
-	-webkit-border-radius: 25px;
-	        border-radius: 25px;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
 }
 header nav.primary-menu .item.special,
 header nav.primary-menu .item.special-2 {
 	/*background: #9F94CD;*/
-	background: #2980B9;
+	background: #3498db;
 	margin: 0 10px;
 }
 header nav.primary-menu .item.special-2 {
@@ -144,6 +160,20 @@ section#main .hero-2{font-size:2em;color:#ddd}
 section#main .hero-3{font-size:1.8em;color:#fff}
 section#main .hero-4{font-size:4em;margin:10px 0;color:#f1c40f}
 
+section#main span.online {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	margin: 8px 0;
+	
+	font-family: "Open Sans", Helvetica, Arial;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 0.9em;
+	color: #DDD;
+	text-align: center;
+}
+
 section#main p {
 	display: block;position: relative;
 	width: 50%;height: auto;
@@ -168,11 +198,22 @@ section#main hr {
 }
 
 section#main .hero-3 .open-date{
-	position: relative;
+	position: relative;display: inline-block;
 	top: 3px;left: 10px;
 	
 	font-size: 1.4em;
 	color: #f1c40f;
+	
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+	
+	-webkit-animation: dateAnim 1s ease-out 3s infinite;
+	   -moz-animation: dateAnim 1s ease-out 3s infinite;
+	     -o-animation: dateAnim 1s ease-out 3s infinite;
+	        animation: dateAnim 1s ease-out 3s infinite;
 }
 
 
@@ -224,8 +265,7 @@ footer .center .copyright {
 }
 
 footer .right a {
-	display: inline-block;
-	margin: 10px 10px;
+	display: inline;
 	padding: 2px 0;
 	
 	font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -245,4 +285,21 @@ footer .right a {
 footer .right a:hover {
 	color: #f1c40f;
 	border-color: #f1c40f;
+}
+
+@keyframes dateAnim {
+	0%, 80%, 100% {
+		-webkit-transform: scale(1);
+		   -moz-transform: scale(1);
+		    -ms-transform: scale(1);
+		     -o-transform: scale(1);
+		        transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.1);
+		   -moz-transform: scale(1.1);
+		    -ms-transform: scale(1.1);
+		     -o-transform: scale(1.1);
+		        transform: scale(1.1);
+	}
 }

@@ -34,15 +34,17 @@ require_once 'core/config.php';
 <body>
 
 	<header>
-		<div class="left">
-			<a href="<?= BASE ?>" title="Utaria, les serveurs de demain !"><div id="logo"></div></a>
-		</div>
-		<div class="right">
-			<!-- <nav class="primary-menu">
-				<a href="#" title="Jouer maintenant"><div class="item special">Jouer</div></a>
-				<a href="https://boutique.utaria.fr/" target="_blank" title="La boutique d'Utaria"><div class="item special-2">Boutique</div></a>
-			</nav> -->
-			<div class="ip">mc.utaria.fr</div>
+		<div class="main-bar row-container">
+			<div class="left">
+				<a href="https://utaria.fr/" title="Utaria, les serveurs de demain !"><div id="logo"></div></a>
+			</div>
+			<div class="right">
+				<nav class="primary-menu">
+					<a href="https://boutique.utaria.fr/" target="_blank" title="La boutique d'Utaria"><div class="item special-2">Boutique</div></a>
+					<a href="https://feedback.utaria.fr/" target="_blank" title="Poster un avis dès maintenant"><div class="item">Poster un avis</div></a>
+					<a href="https://serveurs-minecraft.com/serveur-minecraft?Classement=Utaria" target="_blank" rel="nofollow" title="Voter pour nous"><div class="item">Voter</div></a>
+				</nav>
+			</div>
 		</div>
 
 		<div class="clear"></div>
@@ -54,7 +56,8 @@ require_once 'core/config.php';
 		<h1 class="hero-2">à jouer sur un serveur innovant</h1>
 
 		<p>Un nouveau monde survie unique et équilibré, un mode PVP dynamique et addictif, et bien plus.</p>
-		<h2 class="hero-3">Rendez-vous le <span class="open-date">16.12.2016</span></h2>
+		<h2 class="hero-3">Connectez-vous via <span class="open-date">mc.utaria.fr</span></h2>
+		<span class="online"><?= file_get_contents('https://serveurs-minecraft.com/api?Classement=Utaria&Joueurs_En_Ligne') ?> / <?= file_get_contents('https://serveurs-minecraft.com/api?Classement=Utaria&Slots') ?> joueurs connectés</span>
 	</section>
 
 
@@ -70,10 +73,21 @@ require_once 'core/config.php';
 		<div class="right">
 			<!-- <a href="#" title="Conditions générales">Conditions générales</a>
 			<a href="#" title="Mentions légales">Mentions légales</a> -->
+			<a href="https://serveurs-minecraft.com/serveur-minecraft.php?Classement=Utaria" style="font-size:0.7em" target="_BLANK" rel="nofollow" title="serveurs-minecraft.com">
+				Votez pour nous sur serveurs-minecraft.com
+			</a>&nbsp;-&nbsp;
+			<a href="http://www.serveurs-minecraft.org/vote.php?id=49236" style="font-size:0.7em" target="_BLANK" rel="nofollow" title="serveurs-minecraft.org">
+				Votez pour nous sur serveurs-minecraft.org
+			</a>&nbsp;-&nbsp;
+			<a href="http://www.topminecraft.fr/vote.php?id=4348" style="font-size:0.7em" target="_BLANK" rel="nofollow" title="topminecraft.fr">
+				Votez pour nous sur topminecraft.fr
+			</a>
+			<!-- <a href="http://www.topminecraft.fr/vote.php?id=4348">Voter pour Utaria</a> sur <a href="http://www.topminecraft.fr/" title="top minecraft">TopMinecraft.fr</a> -->
 		</div>
 	</footer>
 
 
+	<script type="text/javascript" src="./js/snow.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
