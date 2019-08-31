@@ -2,9 +2,13 @@
 session_start();
 $VERSION = "0.0.1";
 
-require_once '/var/www/utaria.fr/core/functions.php';
-require_once '/var/www/utaria.fr/api/util.php';
-require_once '/var/www/utaria.fr/api/Database.php';
+define('DS', DIRECTORY_SEPARATOR);
+define('SRC', dirname(dirname(dirname(dirname(__FILE__)))) . DS . 'src');
+
+require SRC . DS . 'core' . DS . 'Config.php';
+require SRC . DS . 'core' . DS . 'Database.php';
+require SRC . DS . 'core' . DS . 'functions.php';
+require SRC . DS . 'api' . DS . 'util.php';
 
 
 $db = getDB();
@@ -47,7 +51,7 @@ if (getGet("search") != null) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta name="description"
         content="Utaria, les serveurs de demain ! Marre du survie classique de Minecraft ? Venez tester notre survie UNIQUE sur mc.utaria.fr !">
@@ -72,13 +76,12 @@ if (getGet("search") != null) {
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://utaria.fr/">
 
-  <link rel="icon" type="image/png" href="//utaria.fr/img/favicon.png"/>
+  <link rel="icon" type="image/png" href="/img/favicon.png"/>
 
   <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//utaria.fr/css/style.min.css">
-  <link rel="stylesheet" type="text/css" href="../feedbacks/style.css">
-  <link rel="stylesheet" type="text/css" href="../feedbacks/table.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./table.css">
 </head>
 <body>
 
@@ -177,7 +180,7 @@ if (getGet("search") != null) {
         results.innerHTML = "";
         loader.style.display = "block";
 
-        req.open('GET', buildUrl('https://utaria.fr/panel/economie/', params), true);
+        req.open('GET', buildUrl('/panel/economie/', params), true);
         req.onreadystatechange = function (aEvt) {
             if (req.readyState == 4 && req.status == 200) {
                 var data = JSON.parse(req.responseText);
