@@ -1,0 +1,2 @@
+<img src="//boutique.utaria.fr/img/error.png" alt="Erreur 404" style="display:block;margin:25px auto">
+<h1 class="hero-1" style="color:#111;text-align:center;text-transform:uppercase">Page introuvable</h1>

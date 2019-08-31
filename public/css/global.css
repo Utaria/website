@@ -1,0 +1,563 @@
+body {
+    background: #EEE;
+    height: auto;
+    overflow: auto
+}
+
+body:before {
+    display: none
+}
+
+ul, ol, menu, dir {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 40px;
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+ol ol, ol ul, ul ol, ul ul {
+    margin-bottom: 0
+}
+
+header {
+    margin: 0;
+    padding: 20px 0;
+
+    background: url(../img/background.png) center center no-repeat fixed;
+    border-bottom: 8px solid #CCC;
+
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+header:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: " ";
+
+    background: rgba(0, 0, 0, 0.3);
+}
+
+section#main {
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    background: white;
+    min-height: 800px
+}
+
+.row-container {
+    display: block;
+    position: relative;
+    width: 1170px;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+.row-container .left,
+.row-container .right {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+    float: left;
+}
+
+.top-box {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    background: url(../img/article-header-devblog.jpg) no-repeat left center;
+}
+
+.top-box:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: " ";
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.top-box h1 {
+    display: block;
+
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #FFF;
+
+    padding-top: 60px;
+}
+
+.top-box h3.subtitle {
+    display: block;
+
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1.4em;
+    color: #EEE;
+}
+
+.top-box h3.subtitle .player-info {
+    position: relative;
+    font-size: 0.8em;
+    color: #CCC;
+
+    top: -2.5px;
+}
+
+.top-box h3.subtitle .player-info img {
+    position: relative;
+    margin-left: 8px;
+    top: 10px;
+}
+
+.row-container .row-3 {
+    display: block;
+    position: relative;
+    width: 30%;
+    height: auto;
+
+    margin: 50px 2.5%;
+    float: left;
+}
+
+.row-container .row-3:nth-child(3n+1) {
+    margin-left: 0
+}
+
+.row-container .row-3:nth-child(3n) {
+    margin-right: 0
+}
+
+.row-3 .article {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 25px;
+}
+
+.row-3 .article .date {
+    text-transform: uppercase;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: .8em;
+
+    color: #565656;
+}
+
+.row-3 .article .title {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 16px;
+    color: #454545;
+
+    margin: 2px 0;
+}
+
+.row-3 .article a:hover {
+    color: #111;
+    text-decoration: underline
+}
+
+.row-3 .article .server {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: .80em;
+
+    color: #2980b9;
+}
+
+p.nothinghere {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    font-family: "Open Sans";
+    text-align: center;
+    font-size: 2em;
+
+    padding: 50px 0;
+}
+
+/* ----------------------------------- */
+/*               ARTICLE               */
+/* ----------------------------------- */
+article {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin: 50px 0;
+}
+
+article img {
+    max-width: 100%;
+}
+
+aside .metabar {
+    display: block; /*position: absolute;*/
+    width: 100%;
+    height: 150px;
+
+    /*bottom: 0;left: 0;right: 0;*/
+
+    background: #DDD;
+}
+
+aside .metabar .left {
+    margin-top: 30px;
+    border-right: 1px solid #898989
+}
+
+aside .metabar .right {
+    margin-top: 40px;
+    padding: 0 25px
+}
+
+aside .metabar .left,
+aside .metabar .right {
+    text-align: center
+}
+
+aside .metabar .left img {
+    position: relative;
+    top: 5px;
+}
+
+aside .metabar .views-counter {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: -5px 0;
+    margin-bottom: 10px;
+    background: #EEE;
+
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: .9em;
+    color: #383838;
+}
+
+section#main aside .comments {
+    margin: 25px auto
+}
+
+section#main aside .comments h3 {
+    display: block;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #383838;
+}
+
+section#main aside .comments hr {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 1px;
+    background: #DDD;
+
+    margin: 10px 0;
+    margin-bottom: 25px;
+}
+
+section#main aside .comments .comment {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+section#main aside .comments .comment .author-head {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+section#main aside .comments .comment .content {
+    display: block;
+    position: relative;
+    width: calc(100% - 80px);
+    height: auto;
+
+    float: left;
+}
+
+/*section#main aside .comments .comment .content p{text-align:justify}*/
+section#main aside .comments .comment .meta {
+    font-family: "Open Sans";
+    font-size: .9em;
+}
+
+section#main aside .comments .comment .meta .playername {
+    font-size: 1.1em;
+    font-weight: bold
+}
+
+section#main aside .comments .comment .meta .response_to {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+
+    font-style: italic;
+    font-size: .9em;
+    color: #262626;
+}
+
+section#main aside .comments .comment .send_response {
+    font-style: italic;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #2980b9;
+    font-size: .9em;
+}
+
+section#main aside .comments .comment .send_response:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+
+section#main aside .subcomments {
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section#main aside .comments label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9em;
+    color: #222;
+}
+
+section#main aside .comments input,
+section#main aside .comments textarea {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+
+    border: 4px solid #DDD;
+    background: #FFF;
+
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: .95em;
+
+    margin: 10px 0;
+    padding: 0 15px;
+
+    -webkit-transition: border-color ease-out .2s;
+    -moz-transition: border-color ease-out .2s;
+    -ms-transition: border-color ease-out .2s;
+    -o-transition: border-color ease-out .2s;
+    transition: border-color ease-out .2s;
+}
+
+section#main aside .comments .left .input input {
+    width: 95%
+}
+
+section#main aside .comments input:focus,
+section#main aside .comments textarea:focus {
+    border-color: #AAA;
+}
+
+section#main aside .comments .input.error input {
+    border-color: red;
+}
+
+section#main aside .comments textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    padding: 15px;
+    min-height: 120px;
+
+    font-weight: normal;
+}
+
+section#main aside .comments input[type="submit"] {
+    width: auto;
+    float: right;
+
+    border: none;
+    background: #3498db;
+    cursor: pointer;
+
+    color: #FFF;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+section#main aside .comments input[type="submit"]:hover {
+    background: #2980b9
+}
+
+.postform_parent_comment-container {
+    display: none;
+}
+
+.postform_parent_comment-container span.introduce {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9em;
+    color: #222;
+
+    margin-bottom: -10px;
+}
+
+.postform_parent_comment-container #postform_parent_comment {
+    display: block;
+    position: relative;
+    width: 97.5%;
+    height: auto;
+
+    background: #EEE;
+    border: 5px solid #DDD;
+    padding: 15px;
+}
+
+.postform_parent_comment-container #postform_parent_comment p {
+    height: 50px;
+    overflow: hidden
+}
+
+
+.pagination-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.pagination li {
+    display: inline;
+    text-align: center;
+}
+
+.pagination a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    padding: 5px 12px;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+
+    border-color: #ddd;
+    color: #4285F4;
+    background: #fff;
+}
+
+.pagination a.active {
+    cursor: default;
+}
+
+.pagination a:active {
+    outline: none;
+}
+
+.pagination li:first-child a {
+    -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px 0 0 6px;
+}
+
+.pagination li:last-child a {
+    -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.pagination li.disabled:first-child a,
+.pagination li.disabled:last-child a {
+    background: #EEE !important;
+    color: #383838 !important;
+    cursor: no-drop !important;
+
+    border-color: #ddd !important;
+}
+
+.pagination a:hover {
+    background: #eee;
+}
+
+.pagination a.active, .pagination a:active {
+    border-color: #2980b9;
+    background: #2980b9;
+    color: #fff;
+}
+
+
+footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+    margin: 0;
+    padding: 20px 10%;
+
+    background-color: #2c3e50;
+    border-top: 8px solid #CCC;
+
+    overflow: hidden;
+}
+
+footer:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: " ";
+
+    background: rgba(0, 0, 0, 0.3);
+}
